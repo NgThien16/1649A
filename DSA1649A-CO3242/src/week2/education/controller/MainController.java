@@ -83,6 +83,7 @@ public class MainController {
                         int display = Integer.parseInt(scanner.nextLine());
                         switch(display){
                             case 1:
+                                teacherService.findAll();
                                 break;
                             case 2:
                                 break;
@@ -134,6 +135,14 @@ public class MainController {
                         int delete = Integer.parseInt(scanner.nextLine());
                         switch(delete){
                             case 1:
+                                System.out.println("input id to delete");
+                                int deleteTeacherId = Integer.parseInt(scanner.nextLine());
+                                boolean deleteTeacher = teacherService.delete(deleteTeacherId);
+                                if(deleteTeacher){
+                                    System.out.println("Teacher successfully deleted");
+                                }else{
+                                    System.out.println("Teacher not deleted");
+                                }
                                 break;
                             case 2:
                                 break;
