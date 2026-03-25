@@ -1,3 +1,5 @@
+package week3;
+
 public class CustomArrayList<E> {
     private Object[] array;
     private int size;
